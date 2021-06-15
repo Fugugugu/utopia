@@ -1,0 +1,244 @@
+@font-face {
+  font-family: "LibreBaskerville";
+  src: url(fonts/LibreBaskerville-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+*{
+  font-family: "LibreBaskerville";
+  font-weight: 400;
+  color:white;
+}
+
+body{
+  margin:0em;
+}
+
+header,nav, .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  position:relative;
+  background-color: black;
+  background-image: url("../logo/U.png");
+  background-size: contain;
+  background-repeat:no-repeat;
+  padding: 1.5em;
+  height:1em;
+  transition: 0.5s;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0,0,0,.2);
+  border-top:.5em solid black;
+  border-left:.5em solid black;
+  border-bottom:.5em solid black;
+}
+
+.menu {
+  margin: 0;
+  margin-left:5em;
+  padding: 0;
+  width: 0;
+  transition: 0.5s;
+  width: 80em;
+}
+
+
+.menu li {
+  list-style: none;
+  margin: 0 .5em;
+}
+
+.menu li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .9em;
+  transition: 0.5s;
+}
+
+.box{
+  box-sizing: border-box;
+	width: 50em;
+	height: 1em;
+	background-color: white;
+	border-radius: 1em;
+	display: flex;
+	align-items: center;
+	padding: 1.1em;
+}
+
+.box > .search-logo-box {
+	width: 1em;
+  height: auto;
+  padding-top: 1em;  
+}
+
+.box > .search-logo {
+	width: .5em;
+}
+
+.box > .search{
+  color: black;
+  width:35em;
+	height: 1em;
+	border: none;
+	outline: none;
+	font-size: .9em;
+	padding-left: .5em;
+}
+
+::placeholder {
+  color: black;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+}
+
+:-ms-input-placeholder {
+  color: black;
+}
+
+nav .input {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.nav-icons{
+  width: 40%;
+  margin-top: 1em;
+  padding: .5em;
+  transition:1s;
+}
+
+.nav-icons:hover{
+  border-radius: 2em;
+  background-color: grey;
+}
+
+.modal {
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: 0.5s;
+}
+
+main{
+  width: 100%;
+  height: auto;
+  background-image:url("../image/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+img{
+  width:100%;
+  }  
+  
+  .container{
+    width:95%;
+    margin:0 auto;
+  }
+  
+  .grid{
+    display:flex;
+    padding-top: 2.5em;
+  }
+  
+  .grid-col{
+    flex: 1;
+    padding: 0 .1em;
+  }
+  
+  .grid-col--2, .grid-col--3{
+    display:none;
+  }
+  
+  .content{
+    position: absolute;
+    background: black;
+    margin-top:1em;
+    margin-left: 1em;
+    border-radius: 1em;
+    padding:.5em;
+  }
+  
+  .content h2{
+    margin:.2em .5em;
+    font-size: 1em;
+  }
+  
+  img{
+    border-radius: 1em;
+  }
+  
+  .grid-timer{
+    position: absolute;
+    background: black;
+    margin-top: -5em;
+    margin-left: 1em;
+    border-radius: 1em;
+    padding:.5em;
+  }
+  
+  .grid-timer h2{
+    margin:.2em .5em;
+    font-size: .7em;
+  }
+  
+  .iconify{
+    font-size: 1em;
+  }
+
+  .add_pin_modal {
+    opacity: 0;
+    pointer-events: none;
+    transition-duration: 0.5s;
+  }
+  
+  @media(min-width: 768px){
+    .container{
+      width:90%;
+    }
+    .grid-col--2{
+      display:block;
+    }
+    .grid-col{
+      padding: 0 .5em;
+    }
+    img{
+      margin-bottom: .8em;
+    }
+    .content,.grid-timer{
+      opacity:0;
+      transition:all .8s;
+      will-change: opacity;
+    }
+    .grid-item:hover .content,.grid-item:hover .grid-timer{
+      cursor: pointer;
+      opacity:1;
+    }
+  
+    .grid-timer{
+      margin-top: -6em;
+    }
+  
+  }
+  
+  @media(min-width: 1080px){
+    .grid-col--3{
+      display:block;
+    }
+    .container{
+      width:80%;
+    }
+  }
+
+  
+  
+
